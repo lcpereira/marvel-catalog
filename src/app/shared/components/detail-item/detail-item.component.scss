@@ -1,0 +1,43 @@
+.detaild-header {
+  font-size: 30px;
+  color: #aaaaaa;
+  & .back, & .favorite {
+    cursor: pointer;
+    &:hover {
+      color: #3a3a3a;
+    }
+    &.active {
+      color: #f56a6a !important;
+    }
+  }
+
+}
+
+.detail-item {
+  & .thumb {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    border-radius: 8px;
+  }
+
+  & .detail-item-content {
+    padding: 10px;
+
+    & .title, & .description {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    & .title {
+      -webkit-line-clamp: 1;
+    }
+
+    & .description {
+      font-size: 14px;
+      -webkit-line-clamp: 2;
+    }
+  }
+}

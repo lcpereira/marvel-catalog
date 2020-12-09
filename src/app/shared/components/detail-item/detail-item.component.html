@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="detaild-header d-flex justify-content-between mb-2">
+    <span class="mdi mdi-arrow-left back" (click)="backPage()"></span>
+    <span class="mdi mdi-heart favorite"></span>
+  </div>
+  <div *ngIf="item$ | async as item; else loadingTemplate">
+    <div class="detail-item row">
+      <div class="col-md-4 col-sm-6 mb-4">
+        <img class="thumb" [src]="item.thumbnail.path + '.' + item.thumbnail.extension" />
+      </div>
+      <div class="col-md-8 col-sm-6">
+        <h2>
+          <strong class="title">{{ item.title || item.name }}</strong>
+        </h2>
+        <p class="description mt-4">{{ item.description || 'Sem descrição' }}</p>
+        <div class="mt-2" *ngIf="item.creators?.items?.length">
+          <h4><strong>Creators</strong></h4>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let creator of item.creators.items">
+                <td>{{ creator.name }}</td>
+                <td>{{ creator.role }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loadingTemplate> Carregando... </ng-template>

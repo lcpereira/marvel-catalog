@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailItemComponent should load character item 1`] = `
+<ngx-detail-item
+  item$={[Function Observable]}
+  itemId={[Function String]}
+  marvelService={[Function MarvelService]}
+  route={[Function ActivatedRoute]}
+  router={[Function Router]}
+  subs={[Function Subscription]}
+  type={[Function String]}
+>
+  <div
+    class="container"
+  >
+    <div
+      class="detaild-header d-flex justify-content-between mb-2"
+    >
+      <span
+        class="mdi mdi-arrow-left back"
+      />
+      <span
+        class="mdi mdi-heart favorite"
+      />
+    </div>
+    
+     Carregando... 
+  </div>
+</ngx-detail-item>
+`;
+
+exports[`DetailItemComponent should load comic item 1`] = `
+<ngx-detail-item
+  item$={[Function Observable]}
+  itemId={[Function String]}
+  marvelService={[Function MarvelService]}
+  route={[Function ActivatedRoute]}
+  router={[Function Router]}
+  subs={[Function Subscription]}
+  type={[Function String]}
+>
+  <div
+    class="container"
+  >
+    <div
+      class="detaild-header d-flex justify-content-between mb-2"
+    >
+      <span
+        class="mdi mdi-arrow-left back"
+      />
+      <span
+        class="mdi mdi-heart favorite"
+      />
+    </div>
+    
+     Carregando... 
+  </div>
+</ngx-detail-item>
+`;

@@ -1,0 +1,33 @@
+<div>
+  <div class="form-group">
+    <input
+      #searchField
+      (input)="this.$searchText.next(searchField.value)"
+      type="text"
+      class="form-control"
+      placeholder="Title start with"
+    />
+  </div>
+</div>
+<div
+  class="row"
+  infinite-scroll
+  [infiniteScrollDistance]="scrollDistance"
+  [infiniteScrollUpDistance]="scrollUpDistance"
+  [infiniteScrollThrottle]="throttle"
+  (scrolled)="loadMoreComics(true)"
+>
+  <div class="col-md-6" *ngFor="let comic of comics">
+    <ngx-card-item [item]="comic"></ngx-card-item>
+  </div>
+</div>
+
+<div class="row" [hidden]="!isLoading">
+  <div class="col-md-6" *ngFor="let i of [1, 2, 3, 4]">
+    <ngx-card-item-loading></ngx-card-item-loading>
+  </div>
+</div>
+
+<div class="not-found-comics d-flex justify-content-center" *ngIf="!isLoading && !comics.length">
+  <img class="mt-2" src="assets/not-found.gif" alt="not-found" />
+</div>

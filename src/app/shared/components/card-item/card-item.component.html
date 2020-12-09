@@ -1,0 +1,9 @@
+<div class="card-item d-flex" routerLink="{{ item.id }}">
+  <div class="card-item-image">
+    <img class="thumb" [src]="item.thumbnail.path + '.' + item.thumbnail.extension" />
+  </div>
+  <div class="card-item-content">
+    <strong class="title">{{ item.title || item.name }}</strong>
+    <p class="description">{{ item.description || 'Without description' }}</p>
+  </div>
+</div>
