@@ -1,6 +1,6 @@
 # Marvel Catalog
 
-[![Build Status](https://travis-ci.org/lcpereira/marvel-catalog.svg?branch=main)](https://travis-ci.org/lcpereira/marvel-catalog)
+[![Build Status](https://travis-ci.com/lcpereira/marvel-catalog.svg?branch=main)](https://travis-ci.com/lcpereira/marvel-catalog)
 [![codecov](https://codecov.io/gh/lcpereira/marvel-catalog/branch/main/graph/badge.svg?token=4JRKACSYNI)](https://codecov.io/gh/lcpereira/marvel-catalog)
 
 [Demo](https://lcpereira.github.io/marvel-catalog)
